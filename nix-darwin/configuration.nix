@@ -5,9 +5,10 @@
   imports = [ <home-manager/nix-darwin> ];
 
   # Use custom location for configuration.nix.
-  environment.darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
-
-  environment.systemPackages = [ pkgs.git ];
+  environment = {
+    darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
+    systemPackages = [ pkgs.git ];
+  };
 
   # do garbage collection weekly to keep disk usage low
   nix.gc = {
