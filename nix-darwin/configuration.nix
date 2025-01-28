@@ -38,7 +38,17 @@
 
     home.packages = with pkgs; [ direnv jq shellcheck taskwarrior3 helix tig ];
 
-    programs.fish = { enable = true; };
+    programs.fish = { 
+      enable = true;
+    };
+
+    programs.helix = {
+      enable = true;
+      defaultEditor = true;
+      settings = {
+        theme = "flexoki_dark";
+      };
+    };
 
     programs.git = {
       enable = true;
