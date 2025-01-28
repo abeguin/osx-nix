@@ -7,7 +7,7 @@
   # Use custom location for configuration.nix.
   environment = {
     darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
-    systemPackages = [ pkgs.git ];
+    systemPackages = [ pkgs.git pkgs.nixfmt-classic ];
   };
 
   # do garbage collection weekly to keep disk usage low
@@ -36,18 +36,22 @@
 
   home-manager.users.abeguin = {
 
-    home.packages = with pkgs; [ direnv jq shellcheck taskwarrior3 helix tig ];
+    home.packages = with pkgs; [
+      direnv
+      jq
+      shellcheck
+      taskwarrior3
+      helix
+      tig
+      fishPlugins.git-abbr
+    ];
 
-    programs.fish = { 
-      enable = true;
-    };
+    programs.fish = { enable = true; };
 
     programs.helix = {
       enable = true;
       defaultEditor = true;
-      settings = {
-        theme = "flexoki_dark";
-      };
+      settings = { theme = "flexoki_dark"; };
     };
 
     programs.git = {
