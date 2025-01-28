@@ -5,7 +5,7 @@
   imports = [ <home-manager/nix-darwin> ];
 
   # Use custom location for configuration.nix.
-  environment.darwinConfig = "$HOME/.nix-config/nix-darwin/configuration.nix";
+  environment.darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
 
   environment.systemPackages = [ pkgs.git ];
 
@@ -35,7 +35,7 @@
 
   home-manager.users.abeguin = {
 
-    home.packages = with pkgs; [ direnv jq shellcheck taskwarrior3 ];
+    home.packages = with pkgs; [ direnv jq shellcheck taskwarrior3 helix tig ];
 
     programs.fish = { enable = true; };
 
