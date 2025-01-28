@@ -63,24 +63,56 @@
 
     home.stateVersion = "24.11";
   };
-  system = {
-  defaults = {
 
-    # customize finder
-    finder = {
-      _FXShowPosixPathInTitle = true;  # show full path in finder title
-      AppleShowAllExtensions = true;  # show all file extensions
-      QuitMenuItem = true;  # enable quit menu item
-      ShowPathbar = true;  # show path bar
-      ShowStatusBar = true;  # show status bar
+
+  homebrew = {
+    enable = true;
+
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      cleanup = "zap";
     };
+
+    # taps
+    # taps = [];
+
+    # cellar apps
+    # brews = [];
+
+    # cask apps
+    casks = [
+      "firefox"
+      "iterm2"
+    ];
 
   };
 
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
-  stateVersion = 5;
-};
+# Applications to install from Mac App Store using mas.
+# You need to install all these Apps manually first so that your apple account have records for them.
+# otherwise Apple Store will refuse to install them.
+# For details, see https://github.com/mas-cli/mas
+# masApps = {}; 
+
+  system = {
+    defaults = {
+
+      # customize finder
+      finder = {
+        _FXShowPosixPathInTitle = true;  # show full path in finder title
+        AppleShowAllExtensions = true;  # show all file extensions
+        QuitMenuItem = true;  # enable quit menu item
+        ShowPathbar = true;  # show path bar
+        ShowStatusBar = true;  # show status bar
+      };
+
+    };
+
+    # Used for backwards compatibility, please read the changelog before changing.
+    # $ darwin-rebuild changelog
+    stateVersion = 5;
+  };
+
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
 }
