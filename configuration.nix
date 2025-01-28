@@ -63,8 +63,24 @@
 
     home.stateVersion = "24.11";
   };
+  system = {
+  defaults = {
+
+    # customize finder
+    finder = {
+      _FXShowPosixPathInTitle = true;  # show full path in finder title
+      AppleShowAllExtensions = true;  # show all file extensions
+      QuitMenuItem = true;  # enable quit menu item
+      ShowPathbar = true;  # show path bar
+      ShowStatusBar = true;  # show status bar
+    };
+
+  };
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
-  system.stateVersion = 5;
+  stateVersion = 5;
+};
+  # Add ability to used TouchID for sudo authentication
+  security.pam.enableSudoTouchIdAuth = true;
 }
