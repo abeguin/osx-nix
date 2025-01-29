@@ -8,6 +8,7 @@
   environment = {
     darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
     systemPackages = [ pkgs.git pkgs.nixfmt-classic ];
+    variables.LANG = "en_GB.UTF-8";
   };
 
   # do garbage collection weekly to keep disk usage low
