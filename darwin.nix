@@ -4,7 +4,7 @@
 
   # Use custom location for configuration.nix.
   environment = {
-    darwinConfig = "$HOME/.config/nix-darwin/configuration.nix";
+    darwinConfig = "$HOME/.config/darwin.nix";
     systemPackages = [ pkgs.git pkgs.nixfmt-classic ];
     variables.LANG = "en_GB.UTF-8";
   };
@@ -33,26 +33,6 @@
 
   programs.fish.enable = true;
 
-  homebrew = {
-    enable = true;
-
-    onActivation = {
-      autoUpdate = true;
-      upgrade = true;
-      cleanup = "zap";
-    };
-
-    # taps
-    # taps = [];
-
-    # cellar apps
-    # brews = [];
-
-    # cask apps
-    casks = [ "firefox" "iterm2" ];
-
-  };
-
   # Applications to install from Mac App Store using mas.
   # You need to install all these Apps manually first so that your apple account have records for them.
   # otherwise Apple Store will refuse to install them.
@@ -80,4 +60,7 @@
 
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
+
+  imports = [ ./homebrew.nix ./home.nix ];
 }
+
