@@ -1,4 +1,4 @@
-{  pkgs, ...};
+{ pkgs, ... }:
 
 {
   imports = [ <home-manager/nix-darwin> ];
@@ -17,6 +17,7 @@
       nil
       gopls
       go
+      yq
     ];
 
     programs.fish = { enable = true; };
