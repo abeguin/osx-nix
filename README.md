@@ -10,31 +10,30 @@ This is my nix configuration for MacOS, without flakes.
 bash <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
-## nix-darwin
-
-### Installation
-
-![Installation](https://github.com/LnL7/nix-darwin/blob/master/README.md#step-2-installing-nix-darwin)
+### Add nix-channels for nixpkgs, nix-darwin and home-manager
 
 ```zsh
 sudo nix-channel --add https://github.com/LnL7/nix-darwin/archive/nix-darwin-24.11.tar.gz darwin
-sudo nix-channel --update
-
-nix-build '<darwin>' -A darwin-rebuild
-./result/bin/darwin-rebuild switch -I darwin-config=/etc/nix-darwin/configuration.nix
-```
-
-## home-manager
-
-![source](https://github.com/nix-community/home-manager)
-![installation](https://nix-community.github.io/home-manager/index.xhtml#sec-install-nix-darwin-module)
-
-### Installation
-
-```zsh
 nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager
+nix-channel --add https://nixos.org/channels/nixpkgs-24.11-darwin nixpkgs
+
+sudo nix-channel --update
 nix-channel --update
 ```
+
+### nix-darwin installation
+
+```zsh
+nix-build '<darwin>' -A darwin-rebuild
+./result/bin/darwin-rebuild switch -I darwin-config=/etc/nix-darwin/configuration.nix
+````
+
+Sources: 
+
+- [nix-darwin installation](https://github.com/LnL7/nix-darwin/blob/master/README.md#step-2-installing-nix-darwin)
+- [home-manager](https://github.com/nix-community/home-manager)
+- [home-manager installation](https://nix-community.github.io/home-manager/index.xhtml#sec-install-nix-darwin-module)
+
 
 ### Examples 
 
@@ -52,6 +51,7 @@ Homebrew configuration and application list can be managed with nix, but homebre
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 
 
 ### AppStore
