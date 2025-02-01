@@ -2,7 +2,7 @@
 
 {
   imports = [ <home-manager/nix-darwin> ];
-  home-manager.users.abeguin = {
+  home-manager.users.afo = {
     home.packages = with pkgs; [
       direnv
       jq
@@ -13,8 +13,6 @@
       fishPlugins.git-abbr
       gh
       nil
-      gopls
-      go
       yq
     ];
     home.stateVersion = "24.11";
