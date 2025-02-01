@@ -22,12 +22,12 @@
   services.nix-daemon.enable = true;
 
   users = {
-    knownUsers = [ "abeguin" ];
-    users.abeguin = {
-      name = "abeguin";
-      home = "/Users/abeguin";
+    knownUsers = [ "afo" ];
+    users.afo = {
+      name = "afo";
+      home = "/Users/afo";
       shell = pkgs.fish;
-      uid = 503;
+      uid = 501;
     };
   };
 
@@ -44,7 +44,6 @@
 
       # customize finder
       finder = {
-        _FXShowPosixPathInTitle = true; # show full path in finder title
         AppleShowAllExtensions = true; # show all file extensions
         QuitMenuItem = true; # enable quit menu item
         ShowPathbar = true; # show path bar
