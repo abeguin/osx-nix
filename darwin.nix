@@ -5,7 +5,7 @@
   # Use custom location for configuration.nix.
   environment = {
     darwinConfig = "$HOME/.config/darwin.nix";
-    systemPackages = [ pkgs.git pkgs.nixfmt-classic ];
+    systemPackages = [ pkgs.git pkgs.nixfmt-classic pkgs.fira-code ];
     variables.LANG = "en_GB.UTF-8";
   };
 
@@ -20,6 +20,8 @@
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
+
+  fonts.packages = [ pkgs.fira-code ];
 
   users = {
     knownUsers = [ "afo" ];
