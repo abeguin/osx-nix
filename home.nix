@@ -10,10 +10,10 @@
       taskwarrior3
       helix
       tig
-      fishPlugins.git-abbr
       gh
       nil
       yq
+      fzf
     ];
     home.stateVersion = "24.11";
     imports = [
