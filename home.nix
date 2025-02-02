@@ -5,7 +5,6 @@
   home-manager.users.afo = {
     home.packages = with pkgs; [
       direnv
-      jq
       shellcheck
       taskwarrior3
       helix
@@ -13,8 +12,18 @@
       gh
       nil
       yq
-      fzf
     ];
+
+    programs = {
+      # Better `cat`
+      bat.enable = true;
+      fzf.enable = true;
+      jq.enable = true;
+      # Install btop https://github.com/aristocratos/btop
+      btop.enable = true;
+      home-manager.enable = true;
+    };
+
     home.stateVersion = "24.11";
     imports = [
       ./programs/direnv.nix
