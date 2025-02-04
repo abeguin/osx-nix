@@ -26,6 +26,9 @@
         src = pkgs.fishPlugins.sponge.src;
       }
     ];
+    shellInitLast = ''
+      source ~/.config/programs/.iterm2_shell_integration.fish
+    '';
   };
 
 }

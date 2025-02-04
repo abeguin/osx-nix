@@ -1,3 +1,4 @@
 *
-!*.nix
 !programs
+!*.nix
+!programs/.iterm2_shell_integration.fish
