@@ -14,6 +14,12 @@
       lockfiles = true;
     };
 
+    # https://github.com/mas-cli/mas
+    masApps = {
+      # "Microsoft Excel" = 462058435;
+      # "Microsoft PowerPoint" = 462062816;
+    };
+
     # taps
     # taps = [];
 
@@ -29,6 +35,7 @@
       "arc"
       "bitwarden"
       "rancher"
+      "nextcloud"
     ];
 
   };
