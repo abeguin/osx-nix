@@ -5,7 +5,7 @@
   # Use custom location for configuration.nix.
   environment = {
     darwinConfig = "$HOME/.config/darwin.nix";
-    systemPackages = [ pkgs.git pkgs.nixfmt-classic pkgs.fira-code ];
+    systemPackages = [ pkgs.git pkgs.nixfmt-classic pkgs.fira-code pkgs.mas ];
     variables.LANG = "en_GB.UTF-8";
   };
 
@@ -34,12 +34,6 @@
   };
 
   programs.fish.enable = true;
-
-  # Applications to install from Mac App Store using mas.
-  # You need to install all these Apps manually first so that your apple account have records for them.
-  # otherwise Apple Store will refuse to install them.
-  # For details, see https://github.com/mas-cli/mas
-  # masApps = {}; 
 
   system = {
     defaults = {
