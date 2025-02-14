@@ -5,7 +5,8 @@
   # Use custom location for configuration.nix.
   environment = {
     darwinConfig = "$HOME/.config/darwin.nix";
-    systemPackages = [ pkgs.git pkgs.nixfmt-classic pkgs.fira-code pkgs.mas ];
+    systemPackages =
+      [ pkgs.git pkgs.nixfmt-classic pkgs.fira-code pkgs.mas pkgs.docker ];
     variables.LANG = "en_GB.UTF-8";
   };
 
@@ -17,9 +18,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
 
   fonts.packages = [ pkgs.fira-code ];
 
