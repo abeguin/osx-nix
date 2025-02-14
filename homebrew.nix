@@ -36,6 +36,7 @@
       "bitwarden"
       "rancher"
       "nextcloud"
+      "keepassxc"
     ];
 
   };
