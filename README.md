@@ -1,10 +1,16 @@
 # osx-nix
 
+## Useful documentation
+
+- [Nix on MacOS](https://nixcademy.com/posts/nix-on-macos/)
+- [MacOS linux builder](https://nixcademy.com/posts/macos-linux-builder/)
+- [Nix Darwin configuration](https://daiderd.com/nix-darwin/manual/index.html)
+
 This is my nix configuration for MacOS, without flakes. 
 
 ## Nix installation 
 
-![Nix multi user installation](https://nix.dev/manual/nix/2.24/installation/installing-binary#multi-user-installation)
+[Nix multi user installation](https://nix.dev/manual/nix/2.24/installation/installing-binary#multi-user-installation)
 
 ```zsh
 bash <(curl -L https://nixos.org/nix/install) --daemon
