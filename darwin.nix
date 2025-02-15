@@ -6,7 +6,7 @@
   environment = {
     darwinConfig = "$HOME/.config/darwin.nix";
     systemPackages =
-      [ pkgs.git pkgs.nixfmt-classic pkgs.fira-code pkgs.mas pkgs.docker ];
+      [ pkgs.git pkgs.nixfmt-rfc-style pkgs.fira-code pkgs.mas pkgs.docker ];
     variables.LANG = "en_GB.UTF-8";
   };
 
