@@ -15,6 +15,7 @@
       # Install btop https://github.com/aristocratos/btop
       btop.enable = true;
       home-manager.enable = true;
+      fastfetch.enable = true;
     };
 
     home.stateVersion = "24.11";
@@ -24,6 +25,7 @@
       ./programs/git.nix
       ./programs/helix.nix
       ./programs/jj.nix
+      ./programs/fastfetch.nix
     ];
   };
 
