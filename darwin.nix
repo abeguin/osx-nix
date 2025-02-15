@@ -18,10 +18,8 @@
     enable = true;
 
     # Macos Linux builder
-    linux-builder.enable = true;
-    settings = {
-      trusted-users = [ "@admin" ];
-    };
+    # linux-builder.enable = true; getting a weird error
+    settings = { trusted-users = [ "@admin" ]; };
     optimise = { automatic = true; };
 
     # Garbage collection    
