@@ -7,7 +7,10 @@
     darwinConfig = "$HOME/.config/darwin.nix";
     systemPackages =
       [ pkgs.git pkgs.nixfmt-rfc-style pkgs.fira-code pkgs.mas pkgs.docker ];
-    variables.LANG = "en_GB.UTF-8";
+    variables = {
+      LANG = "en_GB.UTF-8";
+      EDITOR = "hx";
+    };
   };
 
   # do garbage collection weekly to keep disk usage low
