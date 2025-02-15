@@ -13,8 +13,13 @@
   # do garbage collection weekly to keep disk usage low
   nix = {
     enable = true;
-    gc = {
 
+    # Macos Linux builder
+    linux-builder.enable = true;
+    settings = { trusted-users = [ "@admin" ]; };
+
+    # Garbage collection    
+    gc = {
       automatic = lib.mkDefault true;
       options = lib.mkDefault "--delete-older-than 7d";
     };
