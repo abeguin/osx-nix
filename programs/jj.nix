@@ -3,11 +3,11 @@
   programs.jujutsu = {
     enable = true;
     settings = {
+      ui = { paginate = "never"; };
       user = {
         name = "Arnaud Fontaine";
-        email = "abeguin@kleis.ch";
+        email = "afontaine@kleis.ch";
       };
-      ui = { pager = "less -FRX"; };
       revsets = { log = "@ | ancestors(remote_bookmarks().., 2) | trunk()"; };
     };
   };
