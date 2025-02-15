@@ -19,13 +19,17 @@
 
     # Macos Linux builder
     linux-builder.enable = true;
-    settings = { trusted-users = [ "@admin" ]; };
+    settings = {
+      trusted-users = [ "@admin" ];
+      auto-optimise-store = true;
+    };
 
     # Garbage collection    
     gc = {
       automatic = lib.mkDefault true;
       options = lib.mkDefault "--delete-older-than 7d";
     };
+
   };
 
   # Allow unfree packages
