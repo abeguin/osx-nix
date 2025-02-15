@@ -21,15 +21,14 @@
     linux-builder.enable = true;
     settings = {
       trusted-users = [ "@admin" ];
-      auto-optimise-store = true;
     };
+    optimise = { automatic = true; };
 
     # Garbage collection    
     gc = {
       automatic = lib.mkDefault true;
       options = lib.mkDefault "--delete-older-than 7d";
     };
-
   };
 
   # Allow unfree packages
