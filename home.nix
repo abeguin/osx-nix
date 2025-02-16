@@ -3,7 +3,16 @@
 {
   imports = [ <home-manager/nix-darwin> ];
   home-manager.users.afo = {
-    home.packages = with pkgs; [ direnv shellcheck taskwarrior3 tig gh nil yq ];
+    home.packages = with pkgs; [
+      direnv
+      shellcheck
+      taskwarrior3
+      tig
+      gh
+      nil
+      yq
+      jjui
+    ];
     programs = {
       # Better `cat`
       bat.enable = true;
