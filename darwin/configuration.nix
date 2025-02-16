@@ -44,9 +44,9 @@
     enable = true;
     package = pkgs.nix;
 
-    # extraOptions = ''
-    #   extra-platforms = x86_64-darwin aarch64-darwin
-    # '';
+    extraOptions = ''
+      extra-platforms = x86_64-darwin aarch64-darwin
+    '';
 
     # Macos Linux builder
     # linux-builder.enable = true; # getting a weird error
