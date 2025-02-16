@@ -49,17 +49,24 @@
     '';
 
     # Macos Linux builder
-    # linux-builder.enable = true; # getting a weird error
+    linux-builder = {
+      enable = true;
+      ephemeral = true;
+      maxJobs = 4;
+      config = {
+        virtualisation = {
+          darwin-builder = {
+            diskSize = 40 * 1024;
+            memorySize = 8 * 1024;
+          };
+          cores = 6;
+        };
+      };
+    };
+
     settings = {
       trusted-users = [ "root" "${user}" ];
       experimental-features = [ "nix-command" "flakes" ];
-      # # - Replace ${ARCH} with either aarch64 or x86_64 to match your host machine
-      # # - Replace ${MAX_JOBS} with the maximum number of builds (pick 4 if you're not sure)
-      # builders =
-      #   "ssh-ng://builder@linux-builder aarch64-linux /etc/nix/builder_ed25519 8 - - - c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUpCV2N4Yi9CbGFxdDFhdU90RStGOFFVV3JVb3RpQzVxQkorVXVFV2RWQ2Igcm9vdEBuaXhvcwo=";
-
-      # # Not strictly necessary, but this will reduce your disk utilization
-      # builders-use-substitutes = true;
     };
 
     # Nix Store optimisation
