@@ -1,29 +1,58 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, user, hostname, ... }:
 
 {
 
-  # Use custom location for configuration.nix.
+  # MacOS user & shell
+  users = {
+    knownUsers = [ "${user}" ];
+    users."${user}" = {
+      name = "${user}";
+      home = "/Users/${user}";
+      shell = pkgs.fish;
+      uid = 501;
+    };
+  };
+
+  # Networking
+  networking = {
+    computerName = "${hostname}";
+    hostName = "${hostname}";
+  };
+
+  # Environment variables
   environment = {
-    darwinConfig = "$HOME/.config/darwin.nix";
-    systemPackages =
-      [ pkgs.git pkgs.nixfmt-rfc-style pkgs.fira-code pkgs.mas pkgs.docker ];
+    systemPackages = with pkgs; [
+      git
+      nil
+      nixfmt-rfc-style
+      nixpkgs-fmt
+      mas
+      docker
+    ];
     variables = {
       LANG = "en_GB.UTF-8";
       EDITOR = "hx";
     };
   };
 
-  # do garbage collection weekly to keep disk usage low
+  # System wide programs
+  programs = { fish.enable = true; };
+
+  # Nix Configuration
+  # https://mynixos.com/nix-darwin/options/nix
   nix = {
     enable = true;
-    extraOptions = ''
-      extra-platforms = x86_64-darwin aarch64-darwin
-    '';
+    package = pkgs.nix;
+
+    # extraOptions = ''
+    #   extra-platforms = x86_64-darwin aarch64-darwin
+    # '';
 
     # Macos Linux builder
     # linux-builder.enable = true; # getting a weird error
     settings = {
-      trusted-users = [ "@admin" ];
+      trusted-users = [ "root" "${user}" ];
+      experimental-features = [ "nix-command" "flakes" ];
       # # - Replace ${ARCH} with either aarch64 or x86_64 to match your host machine
       # # - Replace ${MAX_JOBS} with the maximum number of builds (pick 4 if you're not sure)
       # builders =
@@ -32,35 +61,33 @@
       # # Not strictly necessary, but this will reduce your disk utilization
       # builders-use-substitutes = true;
     };
+
+    # Nix Store optimisation
     optimise = { automatic = true; };
 
     # Garbage collection    
     gc = {
-      automatic = lib.mkDefault true;
-      options = lib.mkDefault "--delete-older-than 7d";
+      automatic = true;
+      interval = {
+        Hour = 3;
+        Minute = 30;
+      };
+      options = "--delete-older-than 2d";
     };
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = { config.allowUnfree = true; };
 
-  fonts.packages = [ pkgs.fira-code ];
-
-  users = {
-    knownUsers = [ "afo" ];
-    users.afo = {
-      name = "afo";
-      home = "/Users/afo";
-      shell = pkgs.fish;
-      uid = 501;
-    };
-  };
-
-  programs.fish.enable = true;
-
+  # System Global Configuration
   system = {
     defaults = {
-
+      NSGlobalDomain = {
+        # Locale Configuration
+        AppleMeasurementUnits = "Centimeters";
+        AppleTemperatureUnit = "Celsius";
+        AppleICUForce24HourTime = true;
+      };
       # customize finder
       finder = {
         AppleShowAllExtensions = true; # show all file extensions
@@ -68,7 +95,6 @@
         ShowPathbar = true; # show path bar
         ShowStatusBar = true; # show status bar
       };
-
     };
 
     # Used for backwards compatibility, please read the changelog before changing.
@@ -78,7 +104,4 @@
 
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
-
-  imports = [ ./homebrew.nix ./home.nix ];
 }
-

@@ -1,4 +1,4 @@
 *
-!programs
 !*.nix
-!programs/.iterm2_shell_integration.fish
+!home-manager
+!darwin
