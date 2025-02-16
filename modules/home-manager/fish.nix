@@ -27,7 +27,7 @@
       }
     ];
     shellInitLast = ''
-      source ~/.config/programs/.iterm2_shell_integration.fish
+      source ~/.config/modules/home-manager/.iterm2_shell_integration.fish
     '';
   };
 
