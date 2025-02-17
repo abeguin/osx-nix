@@ -83,9 +83,6 @@
     };
   };
 
-  # Allow unfree packages
-  nixpkgs = { config.allowUnfree = true; };
-
   # System Global Configuration
   system = {
     defaults = {
@@ -108,6 +105,9 @@
     # $ darwin-rebuild changelog
     stateVersion = 5;
   };
+
+  # Allow unfree packages
+  nixpkgs = { config.allowUnfree = true; };
 
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
