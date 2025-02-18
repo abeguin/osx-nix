@@ -44,25 +44,25 @@
     enable = true;
     package = pkgs.nix;
 
-    extraOptions = ''
-      extra-platforms = x86_64-linux aarch64-linux x86_64-darwin aarch64-darwin
-    '';
+    # extraOptions = ''
+    #   extra-platforms = x86_64-linux aarch64-linux x86_64-darwin aarch64-darwin
+    # '';
 
-    # Macos Linux builder
-    linux-builder = {
-      enable = true;
-      ephemeral = true;
-      maxJobs = 4;
-      config = {
-        virtualisation = {
-          darwin-builder = {
-            diskSize = 40 * 1024;
-            memorySize = 8 * 1024;
-          };
-          cores = 6;
-        };
-      };
-    };
+    # # Macos Linux builder
+    # linux-builder = {
+    #   enable = true;
+    #   ephemeral = true;
+    #   maxJobs = 4;
+    #   config = {
+    #     virtualisation = {
+    #       darwin-builder = {
+    #         diskSize = 40 * 1024;
+    #         memorySize = 8 * 1024;
+    #       };
+    #       cores = 6;
+    #     };
+    #   };
+    # };
 
     settings = {
       trusted-users = [ "root" "${user}" ];
