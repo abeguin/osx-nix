@@ -2,7 +2,17 @@
 
 {
   home = {
-    packages = with pkgs; [ direnv shellcheck taskwarrior3 tig gh nil yq jjui ];
+    packages = with pkgs; [
+      direnv
+      shellcheck
+      taskwarrior3
+      tig
+      gh
+      nil
+      yq
+      jjui
+      frogmouth
+    ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
     stateVersion = "24.11";
