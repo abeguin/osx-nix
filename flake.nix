@@ -13,18 +13,18 @@
   # Flake outputs
   outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, ... }:
     let
-      # user = "abeguin";
-      # user_uid = 503;
-      # system = "x86_64-darwin";
-      # hostname = "MacBook-Pro-de-Arnaud";
-      # git_name = "Arnaud Béguin";
-      # git_email = "abeguin@pictet.com";
-      user = "afo";
-      user_uid = 501;
-      system = "aarch64-darwin";
-      hostname = "Arnauds-MacBook-Pro";
-      git_name = "Arnaud Fontaine";
-      git_email = "afontaine@kleis.ch";
+      user = "abeguin";
+      user_uid = 503;
+      system = "x86_64-darwin";
+      hostname = "MacBook-Pro-de-Arnaud";
+      git_name = "Arnaud Béguin";
+      git_email = "abeguin@pictet.com";
+      # user = "afo";
+      # user_uid = 501;
+      # system = "aarch64-darwin";
+      # hostname = "Arnauds-MacBook-Pro";
+      # git_name = "Arnaud Fontaine";
+      # git_email = "afontaine@kleis.ch";
     in {
       darwinConfigurations = (import ./darwin {
         inherit (nixpkgs) lib;
