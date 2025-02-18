@@ -15,7 +15,7 @@
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
   };
   programs = {
     # Better `cat`
