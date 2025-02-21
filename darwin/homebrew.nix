@@ -38,6 +38,7 @@
       "rancher"
       "nextcloud"
       "keepassxc"
+      "microsoft-teams"
     ];
 
   };
