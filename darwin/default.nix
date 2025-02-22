@@ -1,17 +1,9 @@
-{ lib, inputs, nixpkgs, home-manager, nix-darwin, user, ... }:
-
-let
-  # Darwin Architecture
-  # System Options: [ "aarch64-darwin" "x86_64-darwin" ]
-  system = "aarch64-darwin";
-
-  # Hostname
-  hostname = "Arnauds-MacBook-Pro";
-in {
+{ lib, inputs, nixpkgs, home-manager, nix-darwin, user, user_uid, system
+, hostname, git_name, git_email, ... }: {
   # MacBook Pro
   "${hostname}" = nix-darwin.lib.darwinSystem {
     inherit system;
-    specialArgs = { inherit inputs user hostname; };
+    specialArgs = { inherit inputs user user_uid hostname; };
     modules = [
       # MacBook Pro Configuration
       ./configuration.nix
@@ -22,7 +14,7 @@ in {
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit user; };
+        home-manager.extraSpecialArgs = { inherit user git_name git_email; };
         home-manager.users.${user} = {
           imports = [ (import ./home.nix) ]
             ++ [ (import ../modules/home-manager/direnv.nix) ]

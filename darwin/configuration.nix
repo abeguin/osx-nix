@@ -1,6 +1,4 @@
-{ config, pkgs, user, hostname, ... }:
-
-{
+{ config, pkgs, user, user_uid, hostname, ... }: {
 
   # MacOS user & shell
   users = {
@@ -9,7 +7,7 @@
       name = "${user}";
       home = "/Users/${user}";
       shell = pkgs.fish;
-      uid = 501;
+      uid = user_uid;
     };
   };
 

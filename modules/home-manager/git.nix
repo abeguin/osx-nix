@@ -1,11 +1,11 @@
-{ ... }: {
+{ git_name, git_email, ... }: {
   programs.git = {
     enable = true;
 
-    userName = "abeguin";
-    userEmail = "beguin.arnaud@gmail.com";
+    userName = "${git_name}";
+    userEmail = "${git_email}";
 
-    ignores = [ "local" ".DS_STORE" ".idea" ".envrc" ];
+    ignores = [ "local" ".DS_STORE" ".idea" ".envrc" ".helix" ];
 
     lfs = { enable = true; };
 
