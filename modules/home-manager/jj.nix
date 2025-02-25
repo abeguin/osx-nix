@@ -11,6 +11,14 @@
       ui = { diff.tool = [ "difft" "--color=always" "$left" "$right" ]; };
       revsets = { log = "@ | ancestors(remote_bookmarks().., 2) | trunk()"; };
       git = { push-bookmark-prefix = "abeguin/push-"; };
+      fix = {
+        tools = {
+          python = {
+            command = [ "python" "-m black" ];
+            patterns = [ "**/*.py" ];
+          };
+        };
+      };
     };
   };
 
