@@ -106,6 +106,14 @@
 
         FXPreferredViewStyle = "Nlsv"; # default to list view
       };
+
+      # killall Dock to make them have effect
+      # https://github.com/LnL7/nix-darwin/blob/master/modules/system/defaults/dock.nix
+      dock = {
+        autohide = true;
+        magnification = true;
+        # most recently used spaces
+        mru-spaces = false;
       };
     };
 
