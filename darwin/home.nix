@@ -14,6 +14,8 @@
       yq
       jjui
       frogmouth
+      yazi
+      zellij
       fira-code
     ];
     username = "${user}";
