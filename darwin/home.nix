@@ -17,12 +17,14 @@
       yazi
       zellij
       fira-code
+      ollama
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
     stateVersion = "25.05";
   };
 
+  services = { ollama = { enable = true; }; };
   programs = {
     # Better `cat`
     bat.enable = true;
