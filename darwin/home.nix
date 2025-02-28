@@ -1,6 +1,8 @@
 { config, pkgs, user, ... }:
 
 {
+  fonts.fontconfig.enable = true;
+
   home = {
     packages = with pkgs; [
       direnv
@@ -12,11 +14,13 @@
       yq
       jjui
       frogmouth
+      fira-code
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
     stateVersion = "25.05";
   };
+
   programs = {
     # Better `cat`
     bat.enable = true;
