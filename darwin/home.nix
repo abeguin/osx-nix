@@ -16,8 +16,8 @@
       frogmouth
       yazi
       zellij
-      fira-code
       ollama
+      nerd-fonts.fira-code
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
