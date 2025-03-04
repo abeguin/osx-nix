@@ -19,6 +19,8 @@
       zellij
       ollama
       nerd-fonts.fira-code
+      aerc
+      meli
       obsidian
       qemu
     ];
