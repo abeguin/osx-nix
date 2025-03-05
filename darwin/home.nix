@@ -21,6 +21,9 @@
       nerd-fonts.fira-code
       aerc
       meli
+      isync
+      bitwarden-cli
+      bws
       obsidian
       qemu
     ];
