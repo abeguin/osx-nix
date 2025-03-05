@@ -1,0 +1,19 @@
+IMAPStore gmail-kleis-remote
+Host imap.gmail.com
+SSLType IMAPS
+AuthMechs LOGIN
+User afontaine@kleis.ch
+PassCmd "bws secret get dac50982-40e3-40bc-a28e-b29700f9ad02 | jq '.value'"
+
+MaildirStore gmail-kleis-local
+Path ~/Mail/kleis
+Inbox ~/Mail/kleis/INBOX
+Subfolders Verbatim
+
+Channel gmail-kleis
+Master :gmail-kleis-remote:
+Slave :gmail-kleis-local:
+Create Both
+Expunge Both
+Patterns * !"[Gmail]/All Mail" !"[Gmail]/Important" !"[Gmail]/Starred" !"[Gmail]/Bin"
+SyncState *
