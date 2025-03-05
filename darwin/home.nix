@@ -21,6 +21,9 @@
       nerd-fonts.fira-code
       aerc
       meli
+      isync
+      bitwarden-cli
+      bws
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
@@ -28,6 +31,7 @@
   };
 
   services = { ollama = { enable = true; }; };
+
   programs = {
     # Better `cat`
     bat.enable = true;
