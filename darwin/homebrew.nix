@@ -25,7 +25,7 @@
     # taps = [];
 
     # cellar apps
-    brews = [ "mas" "docker-credential-helper" ];
+    brews = [ "mas" "bitwarden-cli" "docker-credential-helper"];
 
     # cask apps
     casks = [
