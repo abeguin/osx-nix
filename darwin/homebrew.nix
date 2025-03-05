@@ -38,7 +38,9 @@
       "rancher"
       "nextcloud"
       "keepassxc"
-      "microsoft-teams"
+      "microsoft-excel"
+      "microsoft-word"
+      "microsoft-powerpoint"
       "signal"
     ];
 
