@@ -25,7 +25,7 @@
     # taps = [];
 
     # cellar apps
-    brews = [ "mas" "bitwarden-cli" ];
+    brews = [ "mas" ];
 
     # cask apps
     casks = [
