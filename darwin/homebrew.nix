@@ -38,6 +38,9 @@
       "rancher"
       "nextcloud"
       "keepassxc"
+      "microsoft-excel"
+      "microsoft-word"
+      "microsoft-powerpoint"
     ];
 
   };
