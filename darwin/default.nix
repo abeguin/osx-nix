@@ -26,6 +26,8 @@
             ++ [ (import ../modules/home-manager/zellij.nix) ]
             ++ [ (import ../modules/home-manager/jjui.nix) ]
             ++ [ (import ../modules/home-manager/yazi.nix) ];
+            ++ [ (import ../modules/home-manager/yazi.nix) ]
+            ++ [ (import ../modules/home-manager/isync.nix) ];
         };
       }
     ];
