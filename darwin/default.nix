@@ -24,6 +24,7 @@
             ++ [ (import ../modules/home-manager/helix.nix) ]
             ++ [ (import ../modules/home-manager/jj.nix) ]
             ++ [ (import ../modules/home-manager/zellij.nix) ]
+            ++ [ (import ../modules/home-manager/jjui.nix) ]
             ++ [ (import ../modules/home-manager/yazi.nix) ];
         };
       }
