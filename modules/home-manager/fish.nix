@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let localPath = builtins.toPath ./.;
+in {
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -27,7 +29,7 @@
       }
     ];
     shellInitLast = ''
-      source ~/.config/modules/home-manager/.iterm2_shell_integration.fish
+      source ${localPath}/.iterm2_shell_integration.fish
     '';
   };
 
