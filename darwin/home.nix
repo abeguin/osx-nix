@@ -11,7 +11,8 @@
       tig
       gh
       nil
-      yq
+      jq
+      yq-go
       jjui
       frogmouth
       yazi
