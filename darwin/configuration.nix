@@ -73,11 +73,8 @@
     # Garbage collection    
     gc = {
       automatic = true;
-      interval = {
-        Hour = 3;
-        Minute = 30;
-      };
-      options = "--delete-older-than 2d";
+      interval = { Hour = 23; };
+      options = "--delete-older-than 30d";
     };
   };
 
