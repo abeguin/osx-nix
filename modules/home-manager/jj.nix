@@ -9,7 +9,6 @@
         email = "${git_email}";
       };
       ui = { diff.tool = [ "difft" "--color=always" "$left" "$right" ]; };
-      revsets = { log = "@ | ancestors(remote_bookmarks().., 2) | trunk()"; };
       git = { push-bookmark-prefix = "abeguin/push-"; };
       fix = {
         tools = {
@@ -22,9 +21,5 @@
     };
   };
 
-  programs.fish = {
-    shellAbbrs = {
-      jjla = "jj log -r '@ | ancestors(remote_bookmarks()::, 2) | trunk()::'";
-    };
-  };
+  programs.fish = { shellAbbrs = { jjla = "jj log -r 'all()' -n 15"; }; };
 }
