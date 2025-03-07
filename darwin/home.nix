@@ -28,8 +28,7 @@
     stateVersion = "25.05";
   };
 
-  services = { ollama = { enable = true; }; };
-
+  services = { ollama = { enable = false; }; };
   programs = {
     # Better `cat`
     bat.enable = true;
