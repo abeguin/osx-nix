@@ -24,6 +24,7 @@
       meli
       isync
       bitwarden-cli
+      utm
       bws
       obsidian
       qemu
