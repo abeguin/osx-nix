@@ -73,7 +73,6 @@
     # Garbage collection    
     gc = {
       automatic = true;
-      interval = { Hour = 23; };
       options = "--delete-older-than 30d";
     };
   };
