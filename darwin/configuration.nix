@@ -92,6 +92,12 @@
         AppleMeasurementUnits = "Centimeters";
         AppleTemperatureUnit = "Celsius";
         AppleICUForce24HourTime = true;
+        AppleInterfaceStyle = "Dark";
+        AppleShowAllExtensions = true;
+        AppleShowAllFiles = true;
+        AppleWindowTabbingMode = "fullscreen";
+        NSAutomaticWindowAnimationsEnabled = true;
+        NSDocumentSaveNewDocumentsToCloud = false;
       };
       # customize finder
       finder = {
@@ -99,7 +105,7 @@
         QuitMenuItem = true; # enable quit menu item
         ShowPathbar = true; # show path bar
         ShowStatusBar = true; # show status bar
-
+        AppleShowAllFiles = true;
         FXPreferredViewStyle = "Nlsv"; # default to list view
       };
 
@@ -110,16 +116,37 @@
         magnification = true;
         # most recently used spaces
         mru-spaces = false;
+        persistent-apps = [
+          { app = "/Applications/Arc.app"; }
+          { app = "/Applications/IntelliJ IDEA.app"; }
+          { app = "/Applications/iTerm.app"; }
+          { app = "/Applications/Bitwarden.app"; }
+          { spacer = { small = true; }; }
+          { app = "/Applications/Microsoft Word.app"; }
+          { app = "/Applications/Microsoft Excel.app"; }
+          { app = "/Applications/Microsoft PowerPoint.app"; }
+          { spacer = { small = true; }; }
+          { folder = "/Applications/Utilities"; }
+        ];
+        tilesize = 48;
       };
     };
 
     # Used for backwards compatibility, please read the changelog before changing.
     # $ darwin-rebuild changelog
-    stateVersion = 5;
+    stateVersion = 6;
   };
 
   # Allow unfree packages
   nixpkgs = { config.allowUnfree = true; };
+
+  power = {
+    sleep = {
+      computer = 60;
+      display = 5;
+      harddisk = 60;
+    };
+  };
 
   # Add ability to used TouchID for sudo authentication
   security.pam.services.sudo_local.touchIdAuth = true;
