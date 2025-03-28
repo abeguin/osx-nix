@@ -19,6 +19,7 @@
       zellij
       ollama
       nerd-fonts.fira-code
+      gh-dash
       obsidian
       rectangle
       qemu
