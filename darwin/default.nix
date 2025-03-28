@@ -30,6 +30,7 @@ in
             ++ [ (import ../modules/home-manager/zellij.nix) ]
             ++ [ (import ../modules/home-manager/jjui.nix) ]
             ++ [ (import ../modules/home-manager/eza.nix) ]
+            ++ [ (import ../modules/home-manager/gh-dash.nix) ]
             ++ [ (import ../modules/home-manager/yazi.nix) ];
         };
       }
