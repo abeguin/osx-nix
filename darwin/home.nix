@@ -19,6 +19,7 @@
       zellij
       ollama
       nerd-fonts.fira-code
+      gh-dash
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
@@ -39,5 +40,6 @@
     home-manager.enable = true;
     fastfetch.enable = true;
     mergiraf.enable = true;
+    gh-dash.enable = true;
   };
 }
