@@ -5,7 +5,7 @@
     userName = "${git_name}";
     userEmail = "${git_email}";
 
-    ignores = [ "local" ".DS_STORE" ".idea" ".envrc" ".helix" ];
+    ignores = [ "local" ".DS_STORE" ".idea" ".envrc" ".helix" ".direnv" ];
 
     lfs = { enable = true; };
 
