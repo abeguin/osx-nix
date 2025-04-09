@@ -23,7 +23,7 @@
       notmuch
       meli
       isync
-      bitwarden-cli
+      #      bitwarden-cli
       utm
       bws
     ];
