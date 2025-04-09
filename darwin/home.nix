@@ -26,6 +26,7 @@
   };
 
   services = { ollama = { enable = true; }; };
+
   programs = {
     # Better `cat`
     bat.enable = true;
