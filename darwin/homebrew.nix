@@ -38,6 +38,8 @@
       "rancher"
       "nextcloud"
       "keepassxc"
+      "microsoft-teams"
+      "signal"
     ];
 
   };
