@@ -19,11 +19,11 @@
       zellij
       ollama
       nerd-fonts.fira-code
-      aerc
-      notmuch
-      meli
-      isync
-      bitwarden-cli
+      #      aerc
+      #      notmuch
+      #      meli
+      #      isync
+      #      bitwarden-cli
       utm
       bws
       obsidian
