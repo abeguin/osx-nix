@@ -26,6 +26,7 @@
       #      bitwarden-cli
       utm
       bws
+      obsidian
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
