@@ -19,6 +19,7 @@
       zellij
       ollama
       nerd-fonts.fira-code
+      obsidian
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
