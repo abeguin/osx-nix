@@ -30,6 +30,7 @@ in {
     ];
     shellInitLast = ''
       source ${localPath}/.iterm2_shell_integration.fish
+      eval "$(/opt/homebrew/bin/brew shellenv)"
     '';
   };
 
