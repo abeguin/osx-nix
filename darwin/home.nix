@@ -38,5 +38,6 @@
     btop.enable = true;
     home-manager.enable = true;
     fastfetch.enable = true;
+    mergiraf.enable = true;
   };
 }
