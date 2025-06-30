@@ -8,7 +8,10 @@
         name = "${git_name}";
         email = "${git_email}";
       };
-      ui = { diff.tool = [ "difft" "--color=always" "$left" "$right" ]; };
+      ui = {
+        diff.tool = [ "difft" "--color=always" "$left" "$right" ];
+        merge-editor = "mergiraf";
+      };
       git = { push-bookmark-prefix = "abeguin/push-"; };
       fix = {
         tools = {
