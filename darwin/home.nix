@@ -22,6 +22,7 @@
       gh-dash
       obsidian
       rectangle
+      graphviz
       qemu
       kubectl
       k9s
