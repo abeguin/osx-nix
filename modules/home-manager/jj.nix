@@ -9,7 +9,7 @@
         email = "${git_email}";
       };
       ui = {
-        diff.tool = [ "difft" "--color=always" "$left" "$right" ];
+        diff-formatter = [ "difft" "--color=always" "$left" "$right" ];
         merge-editor = "mergiraf";
       };
       git = { push-bookmark-prefix = "abeguin/push-"; };
