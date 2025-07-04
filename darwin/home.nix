@@ -22,6 +22,7 @@
       gh-dash
       obsidian
       rectangle
+      graphviz
       qemu
     ];
     username = "${user}";
