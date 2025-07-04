@@ -20,6 +20,7 @@
       ollama
       nerd-fonts.fira-code
       gh-dash
+      graphviz
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
