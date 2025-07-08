@@ -23,6 +23,8 @@
       obsidian
       rectangle
       graphviz
+      plantuml
+      drawio
       qemu
     ];
     username = "${user}";
