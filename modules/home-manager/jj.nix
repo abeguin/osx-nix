@@ -12,7 +12,9 @@
         diff-formatter = [ "difft" "--color=always" "$left" "$right" ];
         merge-editor = "mergiraf";
       };
-      git = { push-bookmark-prefix = "abeguin/push-"; };
+      templates = {
+        git_push_bookmark = "'abeguin/push-' ++ change_id.short()";
+      };
       fix = {
         tools = {
           python = {
