@@ -22,6 +22,8 @@
       gh-dash
       obsidian
       graphviz
+      plantuml
+      drawio
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
