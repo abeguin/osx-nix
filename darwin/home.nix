@@ -21,6 +21,8 @@
       nerd-fonts.fira-code
       gh-dash
       graphviz
+      plantuml
+      drawio
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
