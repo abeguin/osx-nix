@@ -42,6 +42,7 @@
       "microsoft-word"
       "microsoft-powerpoint"
       "signal"
+      "android-studio"
     ];
 
   };
