@@ -17,7 +17,7 @@
       frogmouth
       yazi
       zellij
-      #      ollama
+      ollama
       nerd-fonts.fira-code
       #      aerc
       #      notmuch
@@ -28,6 +28,7 @@
       bws
       obsidian
       qemu
+      cocoapods
       kubectl
       k9s
       tealdeer
