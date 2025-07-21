@@ -44,6 +44,7 @@
       "microsoft-powerpoint"
       "signal"
       "android-studio"
+      "google-chrome"
     ];
 
   };
