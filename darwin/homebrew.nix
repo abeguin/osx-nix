@@ -19,6 +19,7 @@
     masApps = {
       # "Microsoft Excel" = 462058435;
       # "Microsoft PowerPoint" = 462062816;
+      "Xcode" = 497799835;
     };
 
     # taps
