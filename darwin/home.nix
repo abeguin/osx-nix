@@ -26,9 +26,7 @@
       #      bitwarden-cli
       utm
       bws
-      obsidian
       qemu
-      cocoapods
       kubectl
       k9s
       tealdeer
