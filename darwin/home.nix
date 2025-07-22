@@ -26,9 +26,7 @@
       #      bitwarden-cli
       utm
       bws
-      obsidian
       qemu
-      cocoapods
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
