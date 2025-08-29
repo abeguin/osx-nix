@@ -20,6 +20,7 @@
       #      ollama
       nerd-fonts.fira-code
       obsidian
+      rectangle
       qemu
       kubectl
       k9s
