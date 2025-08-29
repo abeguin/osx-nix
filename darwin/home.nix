@@ -20,6 +20,7 @@
       ollama
       nerd-fonts.fira-code
       obsidian
+      rectangle
       qemu
     ];
     username = "${user}";
