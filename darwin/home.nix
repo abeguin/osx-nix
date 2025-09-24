@@ -20,6 +20,7 @@
       ollama
       nerd-fonts.fira-code
       obsidian
+      qemu
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
