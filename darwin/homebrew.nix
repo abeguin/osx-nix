@@ -25,7 +25,7 @@
     # taps = [];
 
     # cellar apps
-    brews = [ "mas" "bitwarden-cli" ];
+    brews = [ "mas" "docker-credential-helper" ];
 
     # cask apps
     casks = [
@@ -38,8 +38,12 @@
       "rancher"
       "nextcloud"
       "keepassxc"
-      "microsoft-teams"
+      "microsoft-excel"
+      "microsoft-word"
+      "microsoft-powerpoint"
       "signal"
+      "android-studio"
+      "google-chrome"
     ];
 
   };
