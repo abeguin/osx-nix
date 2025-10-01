@@ -19,14 +19,7 @@
 
   # Environment variables
   environment = {
-    systemPackages = with pkgs; [
-      git
-      nil
-      nixfmt-rfc-style
-      nixpkgs-fmt
-      mas
-      docker
-    ];
+    systemPackages = with pkgs; [ git nil nixfmt-rfc-style nixpkgs-fmt mas ];
     variables = {
       LANG = "en_GB.UTF-8";
       EDITOR = "hx";
