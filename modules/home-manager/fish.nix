@@ -23,10 +23,6 @@ in {
         name = "fzf";
         src = pkgs.fishPlugins.fzf-fish.src;
       }
-      {
-        name = "sponge";
-        src = pkgs.fishPlugins.sponge.src;
-      }
     ];
     shellInitLast = ''
       source ${localPath}/.iterm2_shell_integration.fish
