@@ -44,6 +44,8 @@
       "signal"
       "android-studio"
       "google-chrome"
+      "obsidian"
+      "tabby"
     ];
 
   };
