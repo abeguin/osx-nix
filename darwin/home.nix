@@ -27,6 +27,8 @@
       utm
       bws
       qemu
+      kubectl
+      helm
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
