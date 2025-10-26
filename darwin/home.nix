@@ -28,6 +28,7 @@
       bws
       qemu
       kubectl
+      helm
       k9s
       tealdeer
       ripgrep
