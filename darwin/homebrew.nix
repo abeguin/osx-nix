@@ -48,6 +48,7 @@
       "obsidian"
       "tabby"
       "lens"
+      "alacritty"
     ];
 
   };
