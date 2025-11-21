@@ -29,6 +29,12 @@
       qemu
       kubectl
       k9s
+      tealdeer
+      ripgrep
+      broot
+      ouch
+      fd
+      television
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
@@ -50,5 +56,6 @@
     home-manager.enable = true;
     fastfetch.enable = true;
     mergiraf.enable = true;
+    awscli.enable = true;
   };
 }
