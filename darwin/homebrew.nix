@@ -47,6 +47,7 @@
       "google-chrome"
       "obsidian"
       "tabby"
+      "lens"
     ];
 
   };
