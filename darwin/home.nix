@@ -28,7 +28,7 @@
       bws
       qemu
       kubectl
-      helm
+      k9s
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
