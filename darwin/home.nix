@@ -17,7 +17,6 @@
       frogmouth
       yazi
       zellij
-      #      ollama
       nerd-fonts.fira-code
       gh-dash
       obsidian
@@ -58,6 +57,7 @@
     home-manager.enable = true;
     fastfetch.enable = true;
     mergiraf.enable = true;
+    television.enable = true;
     awscli.enable = true;
   };
 }
