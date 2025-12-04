@@ -12,6 +12,25 @@ This is my personal configuration for osx macbook using nix-darwin and home-mana
 bash <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
+### Install nix-darwin
+
+[nix-darwin](https://github.com/nix-darwin/nix-darwin/tree/master)
+
+#### From scratch 
+
+```bash
+sudo mkdir -p /etc/nix-darwin
+sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
+cd /etc/nix-darwin
+
+# To use Nixpkgs unstable:
+nix flake init -t nix-darwin/master
+# To use Nixpkgs 25.05:
+nix flake init -t nix-darwin/nix-darwin-25.05
+
+sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+```
+
 ### Install homebrew
 
 Some applications may not be available through nixpkgs and has to be installed with homebrew. 
