@@ -17,22 +17,18 @@
       frogmouth
       yazi
       zellij
-      ollama
       nerd-fonts.fira-code
       gh-dash
       obsidian
-      rectangle
       graphviz
       plantuml
       drawio
-      qemu
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
     stateVersion = "25.05";
   };
 
-  services = { ollama = { enable = false; }; };
   programs = {
     # Better `cat`
     bat.enable = true;
