@@ -24,10 +24,6 @@ in {
         src = pkgs.fishPlugins.fzf-fish.src;
       }
     ];
-    shellInitLast = ''
-      source ${localPath}/.iterm2_shell_integration.fish
-      eval "$(/usr/local/bin/brew shellenv)"
-    '';
   };
 
 }

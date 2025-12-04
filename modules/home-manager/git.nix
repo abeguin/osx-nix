@@ -2,14 +2,18 @@
   programs.git = {
     enable = true;
 
-    userName = "${git_name}";
-    userEmail = "${git_email}";
+    settings = {
+      user = {
+        name = "${git_name}";
+        email = "${git_email}";
+      };
+    };
 
     ignores =
       [ "local" ".DS_STORE" ".idea" ".envrc" ".helix" ".direnv" "*.iml" ];
 
     lfs = { enable = true; };
 
-    difftastic = { enable = true; };
   };
+  programs.difftastic.enable = true;
 }
