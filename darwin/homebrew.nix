@@ -30,17 +30,13 @@
     # cask apps
     casks = [
       "firefox"
-      "iterm2"
-      "logitech-g-hub"
       "intellij-idea"
       "arc"
       "bitwarden"
       "rancher"
       "nextcloud"
       "keepassxc"
-      "microsoft-teams"
       "signal"
-      "google-chrome"
       "obsidian"
       "tabby"
     ];
