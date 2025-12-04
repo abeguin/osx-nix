@@ -117,12 +117,8 @@
         persistent-apps = [
           { app = "/Applications/Arc.app"; }
           { app = "/Applications/IntelliJ IDEA.app"; }
-          { app = "/Applications/iTerm.app"; }
+          { app = "/Applications/Tabby.app"; }
           { app = "/Applications/Bitwarden.app"; }
-          { spacer = { small = true; }; }
-          { app = "/Applications/Microsoft Word.app"; }
-          { app = "/Applications/Microsoft Excel.app"; }
-          { app = "/Applications/Microsoft PowerPoint.app"; }
           { spacer = { small = true; }; }
           { folder = "/Applications/Utilities"; }
         ];

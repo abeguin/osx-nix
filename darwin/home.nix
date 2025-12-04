@@ -21,7 +21,6 @@
       nerd-fonts.fira-code
       gh-dash
       obsidian
-      rectangle
       graphviz
       plantuml
       drawio
@@ -45,8 +44,6 @@
     homeDirectory = "/Users/${user}";
     stateVersion = "25.05";
   };
-
-  #  services = { ollama = { enable = true; }; };
 
   programs = {
     # Better `cat`
