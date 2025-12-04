@@ -23,6 +23,12 @@
       graphviz
       plantuml
       drawio
+      tealdeer
+      television
+      ripgrep
+      broot
+      ouch
+      fd
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
@@ -42,5 +48,7 @@
     home-manager.enable = true;
     fastfetch.enable = true;
     mergiraf.enable = true;
+    television.enable = true;
+    awscli.enable = true;
   };
 }
