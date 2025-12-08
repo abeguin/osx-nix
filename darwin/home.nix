@@ -17,7 +17,7 @@
       frogmouth
       yazi
       zellij
-      ollama
+      #      ollama
       nerd-fonts.fira-code
       #      aerc
       #      notmuch
