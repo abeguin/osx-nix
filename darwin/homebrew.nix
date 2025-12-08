@@ -48,7 +48,7 @@
       "obsidian"
       "tabby"
       "lens"
-      "alacritty"
+      "visual-studio-code"
     ];
 
   };

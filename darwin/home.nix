@@ -17,7 +17,7 @@
       frogmouth
       yazi
       zellij
-      ollama
+      #      ollama
       nerd-fonts.fira-code
       #      aerc
       #      notmuch
@@ -35,13 +35,14 @@
       ouch
       fd
       television
+      difftastic
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
     stateVersion = "25.05";
   };
 
-  services = { ollama = { enable = true; }; };
+  #  services = { ollama = { enable = true; }; };
 
   programs = {
     # Better `cat`

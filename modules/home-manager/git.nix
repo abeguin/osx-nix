@@ -3,8 +3,10 @@
     enable = true;
 
     settings = {
-      user = "${git_name}";
-      email = "${git_email}";
+      user = {
+        name = "${git_name}";
+        email = "${git_email}";
+      };
     };
 
     ignores = [ "local" ".DS_STORE" ".idea" ".envrc" ".helix" ".direnv" ];
@@ -12,5 +14,5 @@
     lfs = { enable = true; };
 
   };
-  programs.difftastic.enable = true;
+  programs.difftastic.git.enable = true;
 }
