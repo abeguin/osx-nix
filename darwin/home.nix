@@ -36,6 +36,7 @@
       fd
       television
       difftastic
+      graphviz
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";

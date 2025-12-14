@@ -49,6 +49,8 @@
       "tabby"
       "lens"
       "visual-studio-code"
+      "webstorm"
+      "pycharm"
     ];
 
   };
