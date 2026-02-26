@@ -19,16 +19,13 @@ bash <(curl -L https://nixos.org/nix/install) --daemon
 #### From scratch 
 
 ```bash
-sudo mkdir -p /etc/nix-darwin
-sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
-cd /etc/nix-darwin
-
 # To use Nixpkgs unstable:
-nix flake init -t nix-darwin/master
-# To use Nixpkgs 25.05:
-nix flake init -t nix-darwin/nix-darwin-25.05
+sudo nix run nix-darwin/master#darwin-rebuild --extra-experimental-features nix-command --extra-experimental-features flakes -- switch
+```
 
-sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+```bash
+# To use Nixpkgs 25.11:
+sudo nix run nix-darwin/nix-darwin-25.11#darwin-rebuild --extra-experimental-features nix-command --extra-experimental-features flakes -- switch
 ```
 
 ### Install homebrew
@@ -60,7 +57,7 @@ git_email = "afontaine@kleis.ch";
 ## Apply nix configuration
 
 ```
-darwin-rebuild switch --flake .
+darwin-rebuild switch --extra-experimental-features nix-command --extra-experimental-features flakes --flake .
 ```
 
 ## aarch64-darwin
