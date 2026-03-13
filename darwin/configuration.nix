@@ -26,9 +26,6 @@
       nixpkgs-fmt
       mas
       docker
-      # ruff
-      # python313Packages.python-lsp-ruff
-      # basedpyright
     ];
     variables = {
       LANG = "en_GB.UTF-8";

@@ -39,8 +39,6 @@
       "signal"
       "obsidian"
       "tabby"
-      "ghostty"
-      "alacritty"
     ];
 
   };
