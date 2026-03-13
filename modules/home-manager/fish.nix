@@ -1,6 +1,8 @@
 { pkgs, ... }:
-let localPath = builtins.toPath ./.;
-in {
+let
+  localPath = builtins.toPath ./.;
+in
+{
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -24,10 +26,12 @@ in {
         src = pkgs.fishPlugins.fzf-fish.src;
       }
     ];
-    shellInitLast = ''
-      source ${localPath}/.iterm2_shell_integration.fish
-      eval "$(/usr/local/bin/brew shellenv)"
-    '';
+    shellAbbrs = {
+      cat = "bat";
+      grep = "rg";
+      find = "fd";
+      br = "broot";
+    };
   };
 
 }
