@@ -16,11 +16,11 @@
   # Flake outputs
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nix-darwin, ... }:
     let
-      user = "abeguin";
-      user_uid = 503;
+      user = "afo";
+      user_uid = 501;
       system = "aarch64-darwin";
-      hostname = "Arnauds-MacBook-Pro";
-      git_name = "Arnaud Béguin";
+      hostname = "MacBook-Pro-de-Arnaud";
+      git_name = "Arnaud Fontaine";
       git_email = "abeguin@pictet.com";
     in {
       darwinConfigurations = (import ./darwin {
