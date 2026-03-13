@@ -30,9 +30,7 @@ in
       cat = "bat";
       grep = "rg";
       find = "fd";
-      du = "dust";
       br = "broot";
-      cd = "z";
     };
   };
 
