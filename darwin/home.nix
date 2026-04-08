@@ -17,17 +17,31 @@
       frogmouth
       yazi
       zellij
-      ollama
+      #      ollama
       nerd-fonts.fira-code
       obsidian
       qemu
+      kubectl
+      k9s
+      tealdeer
+      ripgrep
+      broot
+      ouch
+      fd
+      television
+      difftastic
+      graphviz
+      lazygit
+      lazyjj
+      lazydocker
+      lazycli
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
     stateVersion = "25.05";
   };
 
-  services = { ollama = { enable = true; }; };
+  #  services = { ollama = { enable = true; }; };
 
   programs = {
     # Better `cat`
@@ -42,5 +56,6 @@
     home-manager.enable = true;
     fastfetch.enable = true;
     mergiraf.enable = true;
+    awscli.enable = true;
   };
 }
