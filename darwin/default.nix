@@ -9,6 +9,8 @@
       ./configuration.nix
       ./homebrew.nix
 
+      (import ../modules/toad.nix)
+
       # Home Manager
       home-manager.darwinModules.home-manager
       {
