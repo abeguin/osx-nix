@@ -5,6 +5,9 @@ in
 {
   programs.fish = {
     enable = true;
+    shellInitLast = ''
+      eval "$(/opt/homebrew/bin/brew shellenv fish)";
+    '';
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
     '';
