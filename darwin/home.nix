@@ -1,4 +1,4 @@
-{ config, pkgs, user, ... }:
+{ config, pkgs, pkgs-unstable, user, ... }:
 
 {
   fonts.fontconfig.enable = true;
