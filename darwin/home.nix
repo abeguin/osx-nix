@@ -28,7 +28,6 @@
       bws
       qemu
       kubectl
-      helm
       k9s
       tealdeer
       ripgrep
@@ -43,6 +42,7 @@
       lazydocker
       lazycli
     ];
+    # ++ [ pkgs-unstable.helm ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
     stateVersion = "25.05";
