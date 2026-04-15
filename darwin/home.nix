@@ -5,6 +5,7 @@
 
   home = {
     packages = with pkgs; [
+      claude-code
       direnv
       shellcheck
       taskwarrior3
