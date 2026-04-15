@@ -22,10 +22,16 @@
     };
 
     # taps
-    # taps = [];
+    taps = [ ];
 
     # cellar apps
-    brews = [ "mas" "bitwarden-cli" "docker-credential-helper" "structurizr-cli" ];
+    brews = [
+      "mas"
+      "bitwarden-cli"
+      "docker-credential-helper"
+      "structurizr-cli"
+      "glab"
+    ];
 
     # cask apps
     casks = [
