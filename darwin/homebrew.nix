@@ -35,6 +35,7 @@
 
     # cask apps
     casks = [
+      "warp"
       "claude"
       "firefox"
       "intellij-idea"
