@@ -5,6 +5,7 @@
 
   home = {
     packages = with pkgs; [
+      bitbucket-cli
       claude-code
       direnv
       shellcheck
