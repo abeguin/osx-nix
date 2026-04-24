@@ -35,6 +35,8 @@
 
     # cask apps
     casks = [
+      "microsoft-powerpoint"
+      "microsoft-teams"
       "warp"
       "claude"
       "firefox"
