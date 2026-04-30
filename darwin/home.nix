@@ -5,6 +5,8 @@
 
   home = {
     packages = with pkgs; [
+      aider-chat
+      opencode
       direnv
       shellcheck
       taskwarrior3
@@ -45,7 +47,7 @@
     # ++ [ pkgs-unstable.helm ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
   };
 
   #  services = { ollama = { enable = true; }; };

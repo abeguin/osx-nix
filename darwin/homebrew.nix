@@ -30,8 +30,8 @@
 
     # cask apps
     casks = [
+      "kitty"
       "firefox"
-      "iterm2"
       "logitech-g-hub"
       "intellij-idea"
       "arc"
