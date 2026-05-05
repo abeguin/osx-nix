@@ -36,7 +36,6 @@
     # cask apps
     casks = [
       "kitty"
-      "alacritty"
       "microsoft-powerpoint"
       "microsoft-teams"
       "warp"
