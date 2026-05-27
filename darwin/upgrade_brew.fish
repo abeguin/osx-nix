@@ -19,7 +19,30 @@ function uninstall_logitech_g_hub
     sudo rm -rf /opt/homebrew/Caskroom/logitech-g-hub
 end
 
-uninstall_logitech_g_hub
+set -l manage_ghub 0
+
+# Options:
+#   --ghub      => uninstall puis reinstall Logitech G Hub
+#   --no-ghub   => ne pas toucher Logitech G Hub (defaut)
+for arg in $argv
+    switch $arg
+        case --ghub
+            set manage_ghub 1
+        case --no-ghub
+            set manage_ghub 0
+        case '*'
+            echo "Unknown option: $arg"
+            echo "Usage: "(status filename)" [--ghub|--no-ghub]"
+            exit 1
+    end
+end
+
+if test $manage_ghub -eq 1
+    echo "Managing Logitech G Hub: uninstalling before upgrades..."
+    uninstall_logitech_g_hub
+    echo "Reinstalling Logitech G Hub..."
+    brew install --cask logitech-g-hub
+end
 
 # Upgrade formulae
 for formula in (brew list)
@@ -34,9 +57,6 @@ for cask in (brew list --cask)
 end
 
 echo "Cleaning up..."
-brew cleanup
-
-brew install --cask logitech-g-hub
 brew cleanup
 
 echo "Upgrade complete!"
