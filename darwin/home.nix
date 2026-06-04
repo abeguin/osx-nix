@@ -44,7 +44,7 @@
     ];
     username = "${user}";
     homeDirectory = "/Users/${user}";
-    stateVersion = "25.05";
+    stateVersion = "26.05";
   };
 
   programs = {
@@ -62,5 +62,9 @@
     mergiraf.enable = true;
     television.enable = true;
     awscli.enable = true;
+    man = {
+        enable = true;
+        package = pkgs.man;
+    };
   };
 }

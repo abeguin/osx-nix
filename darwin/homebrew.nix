@@ -6,13 +6,12 @@
       autoUpdate = true;
       upgrade = true;
       cleanup = "zap";
-      extraFlags = [ "--verbose" ];
+      extraFlags = [ "--verbose" "--force-cleanup" ];
     };
 
     global = {
       autoUpdate = true;
       brewfile = true;
-      lockfiles = true;
     };
 
     # https://github.com/mas-cli/mas
@@ -50,6 +49,7 @@
       "signal"
       "obsidian"
       "tabby"
+      "windows-app"
     ];
 
   };

@@ -22,7 +22,7 @@
     systemPackages = with pkgs; [
       git
       nil
-      nixfmt-rfc-style
+      nixfmt
       nixpkgs-fmt
       mas
       docker
