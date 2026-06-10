@@ -43,7 +43,7 @@
       "microsoft-word"
       "microsoft-powerpoint"
       "signal"
-      "android-studio"
+      #      "android-studio"
       "google-chrome"
       "obsidian"
       "tabby"
