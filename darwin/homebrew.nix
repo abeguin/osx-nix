@@ -21,7 +21,9 @@
     };
 
     # taps
-    taps = [ ];
+    taps = [
+      "jundot/omlx https://github.com/jundot/omlx"
+    ];
 
     # cellar apps
     brews = [
@@ -30,6 +32,9 @@
       "docker-credential-helper"
       "structurizr-cli"
       "glab"
+      "hf"
+      "omlx"
+      "nono"
     ];
 
     # cask apps
