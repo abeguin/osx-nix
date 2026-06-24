@@ -55,6 +55,7 @@
       "obsidian"
       "tabby"
       "windows-app"
+      "visual-studio-code"
     ];
 
   };
