@@ -39,6 +39,7 @@
 
     # cask apps
     casks = [
+      "drawio"
       "kitty"
       "microsoft-powerpoint"
       "microsoft-teams"
