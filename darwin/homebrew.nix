@@ -32,9 +32,9 @@
       "docker-credential-helper"
       "structurizr-cli"
       "glab"
-      "hf"
-      "omlx"
-      "nono"
+#      "hf"
+#      "omlx"
+#      "nono"
     ];
 
     # cask apps
