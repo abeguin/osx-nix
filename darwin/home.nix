@@ -5,6 +5,7 @@
 
   home = {
     packages = with pkgs; [
+      go
       aider-chat
       bitbucket-cli
       claude-code
